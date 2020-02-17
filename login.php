@@ -78,6 +78,7 @@ class Loginout
 
     public function login_check()
     {
+      $config = new Config();
       if ($_GET['action'] != 'login_page' and $_GET['action'] != 'login' and $_GET['action'] != ''){
         if (!( file_exists($config->get_file_directory_login() . 'user.txt'))){
             echo '<p>ログインファイル名が違います。</p>';

@@ -25,7 +25,7 @@ class Routing
                 echo " 'action' がありません。";
                 exit();
         }
-        
+        $loginout->login_check();
         if (array_key_exists('action', $_GET)) {
             if ($_GET['action'] == 'input') {
                 $input->input_page();
