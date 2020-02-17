@@ -1,6 +1,6 @@
 <?php
 require_once('../routing.php');
 
-$routing = new Routing();
+$routing = new \bbs\Routing\Routing();
 
 $routing->execute();
