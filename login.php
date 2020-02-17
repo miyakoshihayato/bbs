@@ -75,4 +75,19 @@ class Loginout
     echo '</body>
         </html>';
     }
+
+    public function login_check()
+    {
+      if ($_GET['action'] != 'login_page' and $_GET['action'] != 'login' and $_GET['action'] != ''){
+        if (!( file_exists($config->get_file_directory_login() . 'user.txt'))){
+            echo '<p>ログインファイル名が違います。</p>';
+            echo '<a href = "' . $config->get_url('login_page') . '">ログイン画面へ戻る<a/>';
+            exit();
+        }if (!( file_get_contents($config->get_file_directory_login() . 'user.txt') == $_SERVER['REMOTE_ADDR'])){
+            echo '<p>IPアドレスが違います。</p>';
+            echo '<a href = "' . $config->get_url('login_page') . '">ログイン画面へ戻る<a/>';
+            exit();
+        }
+    }
+    }
 }
