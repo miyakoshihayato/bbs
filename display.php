@@ -1,20 +1,15 @@
 <?php
 namespace bbs\Display;
 
-//require_once('../loginout.php');
-//require_once('../input.php');
-//require_once('../delete.php');
 require_once(__DIR__ . '/config.php');
 
-//$loginout = new Loginout();
-//$input = new Input();
-//$delete = new Delete();
+use bbs\Config\Config;
 
 class Display
 {
     public function list_page()
     {
-    $config = new \bbs\Config\Config();
+    $config = new Config();
     echo '<html>
                 <head>
                   <meta charset="utf-8">
@@ -95,7 +90,7 @@ class Display
 
     public function contents_page()
     {
-    $config = new \bbs\Config\Config();
+    $config = new Config();
     echo '<html>
         <body>';
     if (array_key_exists('task', $_GET)) {

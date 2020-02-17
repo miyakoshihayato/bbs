@@ -1,17 +1,6 @@
 <?php
 namespace bbs\Config;
 
-//require_once('../loginout.php');
-//require_once('../input.php');
-//require_once('../display.php');
-//require_once('../delete.php');
-
-//$loginout = new Loginout();
-//$input = new Input();
-//$dispaly = new Display();
-//$delete = new Delete();
-
-
 class Config
 {
     public function get_url($action)

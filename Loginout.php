@@ -1,14 +1,10 @@
 <?php
 namespace bbs\Loginout;
 
-//require_once('./input.php');
-//require_once('./display.php');
-//require_once('./delete.php');
+
 require_once(__DIR__ . '/config.php');
 
-//$input = new Input();
-//$dispaly = new Display();
-//$delete = new Delete();
+use bbs\Config\Config;
 
 class Loginout
 {
@@ -47,7 +43,7 @@ class Loginout
 
     public function login()
     {
-      $config = new \bbs\Config\Config();
+      $config = new Config();
         if (array_key_exists('id', $_POST) && array_key_exists('pass', $_POST)) {
             if ($_POST['id'] == '' || $_POST['pass'] == '') {
             
@@ -68,7 +64,7 @@ class Loginout
 
     public function logout_page()
     {
-      $config = new \bbs\Config\Config();
+      $config = new Config();
     echo '<html>
         <body>';
         unlink($config->get_file_directory_login() . 'user.txt');
@@ -80,7 +76,7 @@ class Loginout
 
     public function login_check()
     {
-      $config = new \bbs\Config\Config();
+      $config = new Config();
       if ($_GET['action'] != 'login_page' and $_GET['action'] != 'login' and $_GET['action'] != ''){
         if (!( file_exists($config->get_file_directory_login() . 'user.txt'))){
             echo '<p>ログインファイル名が違います。</p>';

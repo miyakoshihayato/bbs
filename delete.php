@@ -1,20 +1,15 @@
 <?php
 namespace bbs\Delete;
 
-//require_once('../loginout.php');
-//require_once('../input.php');
-//require_once('../display.php');
 require_once(__DIR__ . '/config.php');
 
-//$loginout = new Loginout();
-//$input = new Input();
-//$dispaly = new Display();
+use bbs\Config\Config;
 
 class Delete
 {
     function delete_page()
     {
-        $config = new \bbs\Config\Config();
+        $config = new Config();
         echo '<html>
             <body>';
         if (array_key_exists('delete_content', $_POST)) {

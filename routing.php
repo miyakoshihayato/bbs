@@ -19,10 +19,10 @@
         public function Execute()
         {
             $loginout = new Loginout();
-            $input = new \bbs\Input\Input();
-            $display = new \bbs\Display\Display();
-            $delete = new \bbs\Delete\Delete();
-            $config = new \bbs\Config\Config();
+            $input = new Input();
+            $display = new Display();
+            $delete = new Delete();
+            $config = new Config();
             if (array_key_exists('action', $_GET)) {
                 if ($_GET['action'] == '') {
                     echo " 'action' の指定がありません。";
