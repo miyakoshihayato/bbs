@@ -1,5 +1,8 @@
 <?php
-//require_once('../login.php');
+namespace bbs\Input;
+
+
+//require_once('../loginout.php');
 //require_once('../display.php');
 //require_once('../delete.php');
 require_once(__DIR__ . '/config.php');
@@ -12,7 +15,7 @@ class Input
 {
     public function input_page()
     {
-        $config = new Config();
+        $config = new \bbs\Config\Config();
         echo '<html>
                     <head>
                       <meta charset="utf-8">
@@ -55,7 +58,7 @@ class Input
 
     public function save_page()
     {
-        $config = new Config();
+        $config = new \bbs\Config\Config();
         //for ($post_count = 0; $post_count < 10; $post_count++) {
             if (array_key_exists('name', $_POST) && array_key_exists('title', $_POST) && array_key_exists('comment', $_POST)) {
                 if ($_POST['name'] == '' && $_POST['title'] == '' && $_POST['comment'] == '') {

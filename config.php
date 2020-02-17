@@ -1,5 +1,7 @@
 <?php
-//require_once('../login.php');
+namespace bbs\Config;
+
+//require_once('../loginout.php');
 //require_once('../input.php');
 //require_once('../display.php');
 //require_once('../delete.php');
