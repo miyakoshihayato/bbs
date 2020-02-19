@@ -1,0 +1,9 @@
+{
+    "name": "miyakoshihayato/bbs",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "bbs\\": "./"
+        }
+    }
+}

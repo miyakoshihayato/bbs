@@ -1,16 +1,6 @@
 <?php
-    namespace bbs\Routing;
+    namespace bbs;
 
-    require_once('../loginout.php');
-    require_once('../input.php');
-    require_once('../display.php');
-    require_once('../delete.php');
-    require_once('../config.php');
-
-    use bbs\Loginout\Loginout;
-    use bbs\Input\Input;
-    use bbs\Display\Display;
-    use bbs\Delete\Delete;
     use bbs\Config\Config;
     
 

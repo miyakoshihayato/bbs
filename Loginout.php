@@ -1,8 +1,5 @@
 <?php
-namespace bbs\Loginout;
-
-
-require_once(__DIR__ . '/config.php');
+namespace bbs;
 
 use bbs\Config\Config;
 

@@ -1,9 +1,7 @@
 <?php
-namespace bbs\Delete;
+namespace bbs;
 
-require_once(__DIR__ . '/config.php');
-
-use bbs\Config\Config;
+use bbs\Config;
 
 class Delete
 {

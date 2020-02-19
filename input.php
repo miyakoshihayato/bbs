@@ -1,7 +1,5 @@
 <?php
-namespace bbs\Input;
-
-require_once(__DIR__ . '/config.php');
+namespace bbs;
 
 use bbs\Config\Config;
 

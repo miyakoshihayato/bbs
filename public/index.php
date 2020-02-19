@@ -1,6 +1,8 @@
 <?php
-require_once('../routing.php');
+require_once(dirname(__DIR__) . '/vendor/autoload.php');
 
-$routing = new \bbs\Routing\Routing();
+use bbs\Routing;
+
+$routing = new Routing();
 
 $routing->execute();
